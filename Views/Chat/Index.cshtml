@@ -1,0 +1,21 @@
+﻿@model DocQandA.Models.ChatViewModel
+
+<div style="max-width:600px; margin:auto; padding:20px;">
+    <h2>Ask a Question About Your Document</h2>
+
+    <form asp-action="Chat" method="post">
+        <input name="Question"
+               value="@Model.Question"
+               placeholder="Type your question..."
+               style="width:80%; padding:8px;" required />
+        <button type="submit" class="btn btn-success">Ask</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.Answer))
+    {
+        <div style="margin-top:20px; background:#f0f0f0; padding:10px; border-radius:5px;">
+            <strong>Answer:</strong>
+            <p>@Model.Answer</p>
+        </div>
+    }
+</div>

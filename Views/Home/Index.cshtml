@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div style="text-align:center; padding:50px;">
+    @* <img src="~/images/assistant.svg" width="150" /> *@
+    <h1>Welcome to AI Document Assistant</h1>
+    <p>Upload any document and ask questions. Powered by GROQ and Hugging Face embeddings.</p>
+    <a class="btn btn-primary" href="@Url.Action("Index","Chat")">Start</a>
+</div>

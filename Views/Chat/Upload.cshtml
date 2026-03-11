@@ -1,0 +1,13 @@
+﻿@model DocQandA.Models.UploadViewModel
+
+<h2>Upload your document</h2>
+
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="File" required />
+    <button type="submit">Upload</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <p style="color:red;">@Model.ErrorMessage</p>
+}
